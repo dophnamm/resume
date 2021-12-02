@@ -146,6 +146,16 @@ input {
 	}
 }
 
+.hidden {
+	@include phone {
+		display: none;
+	}
+
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
+}
+
 //import after
 @import "./Header.scss";
 @import "./Home.scss";
