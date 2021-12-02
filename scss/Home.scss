@@ -1,0 +1,56 @@
+.home {
+	position: relative;
+
+	&__container {
+		gap: 3rem;
+
+		@include tablet {
+			gap: 1.5rem;
+		}
+
+		.home__data {
+			gap: 0.5rem;
+			text-align: center;
+
+			.home__profession {
+				font-size: var(--normal-font-size);
+				margin-bottom: var(--mb-1);
+			}
+
+			.home__button-movil {
+				display: inline-block;
+				padding: 1rem 2rem;
+				border: 2px solid var(--text-color);
+				color: var(--title-color);
+				border-radius: 0.25rem;
+				transition: 0.3s;
+				margin-top: var(--mb-3);
+
+				&:hover {
+					background-color: var(--text-color);
+					color: var(--container-color);
+				}
+
+				@include tablet {
+					display: none;
+				}
+			}
+		}
+
+		.home__address {
+			gap: 1rem;
+
+			.home__infomation {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				font-size: var(--small-font-size);
+
+				i {
+					margin-right: 0.5rem;
+					font-size: var(--h3-font-size);
+				}
+			}
+		}
+	}
+}

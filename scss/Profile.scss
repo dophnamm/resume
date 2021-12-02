@@ -1,0 +1,11 @@
+.profile {
+	.profile__container {
+		.profile__description {
+			text-align: center;
+
+			@include tablet {
+				text-align: initial;
+			}
+		}
+	}
+}

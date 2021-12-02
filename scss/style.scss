@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
+@import "./variables";
+@import "./mixin";
+@import "./breakpoint";
+
+@import "./app.scss";
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 100%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: $fontFamily;
+	font-weight: 400;
+	line-height: 1.5;
+	font-size: var(--normal-font-size);
+	background-color: var(--body-color);
+	color: var(--text-color);
+	transition: 0.3s;
+
+	@include tablet {
+		margin: 3rem 0;
+	}
+
+	&.dark-theme {
+		--title-color: #{$title-color-dark};
+		--text-color: #{$text-color-dark};
+		--container-color: #{$container-color-dark};
+		--container-color-alt: #{$container-color-alt-dark};
+		--body-color: #{$body-color-dark};
+	}
+}
+
+h1,
+h2,
+h3 {
+	color: var(--title-color);
+	font-weight: var(--font-medium);
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+button,
+input {
+	outline: none;
+}
+
+.section {
+	padding: 1.5rem 0;
+}
+
+.section-title {
+	font-size: var(--h2-font-size);
+	color: var(--title-color);
+	font-weight: var(--font-semi-bold);
+	text-transform: uppercase;
+	letter-spacing: 0.35rem;
+	text-align: center;
+	margin-bottom: var(--mb-3);
+
+	@include tablet {
+		text-align: initial;
+	}
+}
+
+.l-main {
+	margin-bottom: var(--header-height);
+}
+
+.bd-container {
+	max-width: 968px;
+	width: calc(100% - 3rem);
+	margin-left: var(--mb-3);
+	margin-right: var(--mb-3);
+
+	@include tablet {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.bd-grid {
+	display: grid;
+	gap: 1.5rem;
+}
+
+.resume {
+	@include tablet {
+		display: grid;
+		grid-template-columns: 0.5fr 1fr;
+		background-color: var(--container-color);
+		box-shadow: 0 0 8px rgba(13, 12, 12, 0.15);
+
+		.resume__left {
+			background-color: var(--container-color-alt);
+		}
+
+		.resume__left,
+		.resume__right {
+			padding: 0 1.5rem;
+		}
+	}
+}
+
+.change-theme {
+	position: absolute;
+	right: 0;
+	top: 2rem;
+	font-size: 1.25rem;
+	color: var(--text-color);
+	cursor: pointer;
+
+	&:hover {
+		color: var(--title-color);
+	}
+}
+
+.generate-pdf {
+	position: absolute;
+	left: 0;
+	top: 2rem;
+	font-size: 1.25rem;
+	color: var(--text-color);
+	cursor: pointer;
+
+	&:hover {
+		color: var(--title-color);
+	}
+}
+
+//import after
+@import "./Header.scss";
+@import "./Home.scss";
+@import "./Social.scss";
+@import "./Profile.scss";
+@import "./Education.scss";
+@import "./Skills.scss";
+@import "./Exprience.scss";
+@import "./Interests.scss";

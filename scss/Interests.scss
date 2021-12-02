@@ -1,0 +1,17 @@
+.interests {
+	&__container {
+		text-align: center;
+		grid-template-columns: repeat(3, 1fr);
+
+		.interests__name {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+
+			i {
+				font-size: var(--h3-font-size);
+				margin-bottom: 0.5rem;
+			}
+		}
+	}
+}

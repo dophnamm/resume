@@ -1,0 +1,47 @@
+.experience {
+	.experience__container {
+		.experience__content {
+			display: flex;
+
+			.experience__time {
+				position: relative;
+				padding-right: 1rem;
+
+				.experience__rounder {
+					display: block;
+					width: 16px;
+					height: 16px;
+					border-radius: 50%;
+					background-color: var(--text-color-alt);
+					margin-top: 0.35rem;
+				}
+
+				.experience__line {
+					width: 2px;
+					height: 105%;
+					background-color: var(--text-color-alt);
+					display: block;
+					transform: translateX(7px);
+				}
+			}
+
+			.experience__data {
+				gap: 0.75rem;
+
+				.experience__link {
+					display: flex;
+					flex-direction: column;
+
+					a {
+						margin-bottom: var(--mb-1);
+						text-transform: capitalize;
+
+						&:hover {
+							color: var(--title-color);
+						}
+					}
+				}
+			}
+		}
+	}
+}
