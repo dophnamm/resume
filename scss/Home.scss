@@ -12,6 +12,15 @@
 			gap: 0.5rem;
 			text-align: center;
 
+			.home__img {
+				width: 200px;
+				height: 200px;
+				object-fit: contain;
+				margin: 0 auto;
+				border-radius: 50%;
+				background-color: white;
+			}
+
 			.home__profession {
 				font-size: var(--normal-font-size);
 				margin-bottom: var(--mb-1);
